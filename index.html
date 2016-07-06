@@ -13,7 +13,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 inputCol">
-				<h2>Input New Items</h2>
+				<h2>New Inventory</h2>
 				<form novalidate name='newItems' ng-submit="main.submit(newItems.$valid)">
 			   		Name: <input type='text' ng-model='main.form.name' required><br>
 			   		Price: <input type='number' ng-model='main.form.price' required><br>
@@ -36,9 +36,9 @@
 				    </tr>
 				  </thead>
 				  <tbody>
-				    <tr ng-repeat='item in main.data'>
+				    <tr ng-repeat='item in main.data | orderBy: "quantity"'>
 				      <th class="trth" scope="row">{{item.name}}</th>
-				      <td>$ {{((item.price - item.discount) * main.tax + (item.price - item.discount)).toFixed(2)}}<img class="tag" src="images/sale.png" ng-show="main.ShowTag(item.discount)"></td>
+				      <td>{{((item.price - item.discount) * main.tax + (item.price - item.discount)) | currency}}<img class="tag" src="images/sale.png" ng-show="main.ShowTag(item.discount)"></td>
 				      <td>{{item.quantity}}</td>
 				      <td>{{item.color}}</td>
 				    </tr>
