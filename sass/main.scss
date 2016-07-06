@@ -5,20 +5,27 @@ h1 {
 	font-family:$header-font;
 	text-align:center;
 	font-size: 40px;
-	color:#818181;
+	color:#09A6A3;
 	text-transform: uppercase;
+}
+
+h2 {
+	color:#00CCBE;
+	text-align:center;
+	font-family:$header-font;
 }
 
 thead th {
 	font-family:$header-font;
-	font-size:20px;
+	font-size:15px;
 	color:#818181;
 	text-transform: uppercase;
 	text-align:center;
+	
 }
 
 .trth, td {
-	color:#A5A5A5;
+	color:#818181;
 	font-family:$table-font;
 	font-size:15px;
 	text-align:center;
@@ -27,11 +34,30 @@ thead th {
 .table {
 	width:600px;
 	margin:0 auto;
-	background: #F0F0F0;
+	background: #E8E8E8;
 	border:2px solid #D8D8D8;
 	margin-bottom:20px;
+	
+}
+
+form {
+	color:#818181;
+	font-size:20px;
+	font-family:$table-font;
+	text-align:center;
 }
 
 input.ng-invalid { 
-	border:2px solid red; 
+	border:1px solid red; 
+	width:350px;
+	margin:0 auto;
+	display:block;
+	margin-bottom:-20px;
+	height:40px;
+	border-radius:2px;
+
+}
+
+#submit {
+	border-radius:2px;
 }

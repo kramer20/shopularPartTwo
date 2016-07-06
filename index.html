@@ -9,23 +9,23 @@
 	
 </head>
 <body ng-controller='MainController as main'> 
-
+			<h1>Shopular</h1>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 inputCol">
 				<h2>New Inventory</h2>
 				<form novalidate name='newItems' ng-submit="main.submit(newItems.$valid)">
-			   		Name: <input type='text' ng-model='main.form.name' required><br>
-			   		Price: <input type='number' ng-model='main.form.price' required><br>
-			   		Quantity: <input type='number' ng-model='main.form.quantity' required><br>
-			   		Color: <input type='text' ng-model='main.form.color' required><br>
-			   		Discount: <input type='number' ng-model='main.form.discount' required><br>
+			   		Name:<br><input type='text' ng-model='main.form.name' required><br>
+			   		Price:<br><input type='number' ng-model='main.form.price' required><br>
+			   		Quantity:<br><input type='number' ng-model='main.form.quantity' required><br>
+			   		Color:<br><input type='text' ng-model='main.form.color' required><br>
+			   		Discount:<br><input type='number' ng-model='main.form.discount' required><br>
 			   		<input type="submit" id="submit" value="Submit"/>
 			  	</form>
 			</div>
 			  	
 			<div class="col-lg-6 tableCol">
-					<h1>Shopular Inventory</h1>
+					<h2>Inventory</h2>
 				<table class="table table-hover">
 				  <thead>
 				    <tr>

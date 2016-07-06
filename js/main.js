@@ -31,6 +31,8 @@
               
                 if (isValid) {
                   this.data.push(newObj);
+
+                  this.form = []
                 }
             }    
                 
@@ -46,5 +48,6 @@
      
 
       })
+
 
 })();
