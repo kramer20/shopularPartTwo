@@ -1,6 +1,7 @@
 (function() {
     'use strict';
 
+
     angular
       .module('shop',[])
       .controller('MainController', function Main(){
@@ -19,7 +20,21 @@
               { "id": 683, "name": "pillow", "price": 27, "quantity": 10, "color": "black", "discount": 12 }
             ];
 
-            this.tax = .0575;
+            function getRandomArbitrary(min, max) {
+               return Math.random() * (max - min) + min;
+            }
+
+            this.main = {};
+            this.submit = function(isValid){
+              //console.log(this.form);
+              var newObj = { "id": getRandomArbitrary(0,1000), "name": this.form.name, "price": this.form.price, "quantity": this.form.quantity, "color": this.form.color, "discount": this.form.discount};
+              
+                if (isValid) {
+                  this.data.push(newObj);
+                }
+            }    
+                
+      this.tax = .0575;
       
 
       this.ShowTag = function(discount){
@@ -28,7 +43,8 @@
         else
           return true;
       }
-      
+     
+
       })
 
 })();
