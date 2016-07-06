@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app='shop'>
+<head>
+	<title>Shopular</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Buenard|McLaren|Palanquin|Stint+Ultra+Condensed|Tenali+Ramakrishna|Walter+Turncoat" rel="stylesheet">
+
+	
+</head>
+<body> 
+		<h1>Shopular Inventory</h1>
+	<table ng-controller='MainController as main' class="table table-hover">
+	  <thead>
+	    <tr>
+	      <th>Name</th>
+	      <th>Price</th>
+	      <th>Quantity</th>
+	      <th>Color</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr ng-repeat='item in main.data'>
+	      <th class="trth" scope="row">{{item.name}}</th>
+	      <td> $ {{((item.price - item.discount) * main.tax + (item.price - item.discount)).toFixed(2)}}<img class="tag" src="images/sale.png" ng-show="main.ShowTag(item.discount)"></td>
+	      <td>{{item.quantity}}</td>
+	      <td>{{item.color}}</td>
+	    </tr>
+	  </tbody>
+	</table>
+
+	<script src="node_modules/angular/angular.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

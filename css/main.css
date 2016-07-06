@@ -1,0 +1,25 @@
+h1 {
+  font-family: "McLaren", cursive;
+  text-align: center;
+  font-size: 40px;
+  color: #818181;
+  text-transform: uppercase; }
+
+thead th {
+  font-family: "McLaren", cursive;
+  font-size: 20px;
+  color: #818181;
+  text-transform: uppercase;
+  text-align: center; }
+
+.trth, td {
+  color: #A5A5A5;
+  font-family: "Palanquin", sans-serif;
+  font-size: 15px;
+  text-align: center; }
+
+.table {
+  width: 600px;
+  margin: 0 auto;
+  background: #F0F0F0;
+  border: 2px solid #D8D8D8; }
